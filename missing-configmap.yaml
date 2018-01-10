@@ -1,0 +1,14 @@
+#####################################
+# 2018 ithome ironman
+# Author: James Lu
+# Topic: k8s 不自賞 - Day 23 常見問題與建議 (4)
+# Url: https://ithelp.ithome.com.tw/articles/10193954
+# Licence: MIT
+#####################################
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-config
+data:
+  mykey: thisismykey

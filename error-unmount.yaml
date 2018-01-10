@@ -1,0 +1,24 @@
+#####################################
+# 2018 ithome ironman
+# Author: James Lu
+# Topic: k8s 不自賞 - Day 23 常見問題與建議 (4)
+# Url: https://ithelp.ithome.com.tw/articles/10193954
+# Licence: MIT
+#####################################
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: err-unmount-nginx
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    volumeMounts:
+    - mountPath: /test
+      name: test
+  volumes:
+  - name: test
+    gcePersistentDisk:
+      pdName: my-disk
+      fsType: ext4
